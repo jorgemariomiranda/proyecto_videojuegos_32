@@ -1,3 +1,8 @@
+<?php
+
+include 'inicio.php';
+?>
+
 <!doctype html>
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang=""> <![endif]-->
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang=""> <![endif]-->
@@ -114,98 +119,15 @@
 <table border="1"> 
 <tr> 
     
-    
+
+<?php foreach ($productos as $valores){?>    
 <td width="150"> 
-Producto: <b>HITMAN 2018</b><br> 
-Descripcion: <b>juego vilateral"</b><br> 
-Precio: <b>"$120.000"</b><br> 
-VER DETALLE
-
-
-<input type="submit" name="HITMAN 2018" id="button" value=
-       "Añadir al carrito">
-</td> 
-<td width="$160.000"> 
-Producto: <b>FIFA 2017</b><br>
-Descripcion: <b>futbol fifa 2017</b><br> 
-Precio: <b>150.000</b><br>
-VER DETALLE
+Producto: <b><?php echo $valores["nombre"]?></b><br> 
+Descripcion: <b><?php echo $valores["descripcion"]?></b><br> 
+Precio: <b><?php echo $valores["precio"]?></b><br> 
 
 
 
-<input type="submit" name="FIFA 2017" id="button2" value=
-       "Añadir al carrito">
-</td> 
-<td width="150"> 
-Producto: <b>GAME TOUR</b><br> 
-Descripcion: <b>GAME TOUR</b><br> 
-Precio: <b>150000</b><br> 
-VER DETALLE
-
-
-<input type="submit" name="GAME TOUR" id="button3" value=
-       "Añadir al carrito">
-</td> 
-</tr> 
-<tr> 
-<td> 
-Producto: <b>CALL OF DUTTY</b><br> 
-Descripcion: <b>CRIMEN INESPERADO</b><br> 
-Precio: <b>1500000</b><br> 
-VER DETALLE
-<input type="submit" name="CALL OF DUTTY" id="button3" value=
-       "Añadir al carrito">
-</td> <td> 
-    
-Producto: <b>INSTALADOR DE JUEGOS</b><br> 
-Descripcion: <b>SOFTWARE DE JUEGOS</b><br> 
-Precio: <b>110.000</b><br>
-VER DETALLE
-<input type="submit" name="SOFTWARE DE JUEGOS" id="button3" value=
-       "Añadir al carrito">
-</td> 
-
-<td> 
-    
-Producto: <b>MARIO BROS</b><br> 
-Descripcion: <b>JUEGO  </b><br> 
-Precio: <b>250.000</b><br> 
-VER DETALLE
-<input type="submit" name="MARIO BROS" id="button3" value=
-       "Añadir al carrito">
-</td> 
-</tr> 
-<tr> 
-<td> 
-    
-Producto: <b>STUAR DOS</b><br> 
-Descripcion: <b>NINTENDO</b><br> 
-Precio: <b>200.000</b><br> 
-VER DETALLE
-<input type="submit" name="STUAR DOS" id="button3" value=
-       "Añadir al carrito">
-</td> 
-<td> 
-    
-    
-Producto: <b>GRIS GAME</b><br> 
-Descripcion: <b>Gris GAME</b><br> 
-Precio: <b>500.000</b><br> 
-VER DETALLE
-<input type="submit" name="PSP" id="button3" value=
-       "Añadir al carrito">
-</td> 
-<td> 
-    
-    
-Producto: <b>GAME OF TRIY</b><br> 
-Descripcion: <b>JUEGO MACRABOS</b><br> 
-Precio: <b>300.000</b><br> 
-VER DETALLE
-<input type="submit" name="JUEGO MACRABOS" id="button3" value=
-       "Añadir al carrito">
-</td> 
-</tr> 
-</table> 
-</form> 
-<
+<a href="productos.php?id=<?php echo $valores["id"] ?>">Ver detalle</a>
+</td>
+<?php }?>
